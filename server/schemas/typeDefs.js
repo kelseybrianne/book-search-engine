@@ -38,7 +38,7 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         # Don't we want to return book for saveBook and removeBook instead of user(see mutations.js in client)
-        saveBook(bookData: BookInput): User
+        saveBook(bookData: BookInput!): User
         removeBook(bookId: ID!): User
     }
 `;

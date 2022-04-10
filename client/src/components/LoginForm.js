@@ -58,7 +58,7 @@ const LoginForm = () => {
     });
 
     if (!data) throw new Error('something went wrong!');
-  
+    Auth.login(data.login.token);
   } catch (err) {
     console.error(err);
     setShowAlert(true);
@@ -69,8 +69,6 @@ const LoginForm = () => {
     email: '',
     password: '',
   });
-
-  window.location.replace("/");
 };
 
   return (
